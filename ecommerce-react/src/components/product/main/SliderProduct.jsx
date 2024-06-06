@@ -30,7 +30,7 @@ const SliderProduct = ({
     <section {...props}>
       {modal && (
         <button className="text-right md:col-span-4" onClick={handleCloseModal}>
-          cerrar
+          x
         </button>
       )}
       <div className="relative col-span-4 ">
@@ -42,7 +42,7 @@ const SliderProduct = ({
           onClick={handleOpenModal}
         />
         <div
-          className="absolute left-0 top-1/2 flex w-full -translate-y-1/2 justify-between px-4 md:hidden"
+          className="absolute left-0 top-1/2 flex w-full -translate-y-1/2 justify-between  px-4 md:hidden"
           ref={btnSlider}
         >
           <button
@@ -68,7 +68,9 @@ const SliderProduct = ({
           className="relative cursor-pointer overflow-hidden rounded-md"
         >
           <img src={img} alt="" className="hidden md:block md:rounded-md" />
-          <span className=" absolute top-0 h-full w-full hover:bg-[rgba(255,255,255,0.5)]"></span>
+          <span
+            className={`absolute top-0 h-full w-full hover:bg-[rgba(255,255,255,0.5)] ${i === nextImg ? "bg-[rgba(255,255,255,0.5)]" : ""}`}
+          ></span>
         </div>
       ))}
     </section>
