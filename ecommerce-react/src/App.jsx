@@ -1,13 +1,16 @@
 import React from "react";
 
 import MainHeader from "./components/header/MainHeader";
-import MainProduct from "./components/product/main/MainProduct";
+import MainProduct from "./components/product/ModelProduct";
+import { CartDetailsProvider } from "@/context/useCartDetails";
 
 const App = () => {
   return (
     <>
-      <MainHeader />
-      <MainProduct />
+      <CartDetailsProvider>
+        <MainHeader />
+        <MainProduct />
+      </CartDetailsProvider>
     </>
   );
 };
