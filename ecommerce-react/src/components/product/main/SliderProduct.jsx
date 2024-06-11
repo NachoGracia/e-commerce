@@ -38,7 +38,7 @@ const SliderProduct = ({
           src={imgs[nextImg]}
           alt=""
           className="
-        aspect-[1/1] md:cursor-pointer md:rounded-lg  "
+        aspect-[1/1] object-cover md:cursor-pointer md:rounded-lg xl:max-h-[500px] "
           onClick={handleOpenModal}
         />
         <div
