@@ -29,7 +29,10 @@ const SliderProduct = ({
   return (
     <section {...props}>
       {modal && (
-        <button className="text-right md:col-span-4" onClick={handleCloseModal}>
+        <button
+          className="text-right text-2xl  text-white hover:text-orange-600 md:col-span-4"
+          onClick={handleCloseModal}
+        >
           x
         </button>
       )}
