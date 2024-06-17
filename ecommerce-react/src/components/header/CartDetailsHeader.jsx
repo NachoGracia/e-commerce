@@ -23,10 +23,10 @@ const CartDetailsHeader = () => {
               <h6>{product.subtitle}</h6>
               <p>
                 <span>
-                  ${product.discountPrice} x {product.quantity}
+                  {product.discountPrice} € x {product.quantity}
                 </span>{" "}
                 <span className="font-bold">
-                  ${(product.discountPrice * product.quantity).toFixed(2)}
+                  {(product.discountPrice * product.quantity).toFixed(2)} €
                 </span>
               </p>
             </div>
