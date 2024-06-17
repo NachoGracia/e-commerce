@@ -37,14 +37,14 @@ const DetailProduct = ({ objectProduct }) => {
           {objectProduct.description}
         </p>
         <div className="mb-5 grid grid-cols-3 items-center gap-4 font-bold md:grid-cols-[1fr_3fr] md:gap-1">
-          <span className="text-3xl">
-            ${(objectProduct.price * (1 - objectProduct.discount)).toFixed(2)}
+          <span className="text-2xl lg:text-3xl">
+            {(objectProduct.price * (1 - objectProduct.discount)).toFixed(2)} €
           </span>
           <span className="mr-auto rounded-md bg-pale-orange px-2 py-1 text-orange-primary">
             {objectProduct.discount * 100}%
           </span>
           <span className="text-right text-lg text-grayish-blue line-through md:col-span-2 md:text-left">
-            ${objectProduct.price.toFixed(2)}
+            {objectProduct.price.toFixed(2)} €
           </span>
         </div>
         <div className="grid grid-cols-3 gap-4 font-bold md:grid-cols-[1fr_1.7fr]">
