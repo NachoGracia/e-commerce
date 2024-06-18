@@ -16,6 +16,11 @@ export default {
         "light-grayish-blue": "hsl(223, 64%, 98%)",
         "black-75": "hsl(0, 0%, 0%)",
       },
+      gridTemplateColumns: {
+        "1fr_3fr": "1fr 3fr",
+        "1fr_1.7fr": "1fr 1.7fr",
+        "2fr_2fr": "2fr 2fr",
+      },
     },
   },
   plugins: [],
