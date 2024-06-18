@@ -36,8 +36,8 @@ const DetailProduct = ({ objectProduct }) => {
         <p className="mb-5 text-dark-grayish-blue">
           {objectProduct.description}
         </p>
-        <div className="mb-5 grid grid-cols-3 items-center gap-4 font-bold md:grid-cols-[1fr_3fr] md:gap-1">
-          <span className="text-2xl lg:text-3xl">
+        <div className="mb-5 grid grid-cols-3 items-center gap-4 font-bold md:grid-cols-[1fr_3fr] md:gap-1 lg:grid-cols-[2fr_2fr]">
+          <span className="text-xl lg:text-3xl">
             {(objectProduct.price * (1 - objectProduct.discount)).toFixed(2)} €
           </span>
           <span className="mr-auto rounded-md bg-pale-orange px-2 py-1 text-orange-primary">
