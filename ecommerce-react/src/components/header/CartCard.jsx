@@ -1,17 +1,22 @@
 import { useContext } from "react";
 import { CartDetailsContext } from "@/context/useCartDetails";
-
 import DeleteIcon from "@/components/icons/DeleteIcon";
-const CartDetailsHeader = () => {
+
+const CartCard = () => {
   const { cartProducts, deleteCartProducts } = useContext(CartDetailsContext);
 
   return (
-    <section className="absolute left-0 top-[125%] z-10 w-full md:left-full md:top-full md:max-w-lg md:-translate-x-full">
-      <div className="mx-4 rounded-md bg-white shadow-md">
-        <h4 className="px-6 py-8 text-lg font-bold">Cart</h4>
+    <section className=" absolute right-0 top-[25%] z-10 md:right-[5%]  md:top-[10%] md:max-w-lg ">
+      <div className="mx-4 rounded-md bg-white shadow-xl">
+        <div className="grid grid-cols-2">
+          <h4 className="px-6 py-8 text-lg font-bold">Cart</h4>
+        </div>
+
         <hr />
         {cartProducts.length === 0 && (
-          <p className="py-16 text-center">Your cart is empty</p>
+          <p className="bold px-[120px] py-16 text-center text-xl text-dark-grayish-blue">
+            Your cart is empty
+          </p>
         )}
         {cartProducts.map((product) => (
           <article
@@ -50,4 +55,4 @@ const CartDetailsHeader = () => {
   );
 };
 
-export default CartDetailsHeader;
+export default CartCard;
