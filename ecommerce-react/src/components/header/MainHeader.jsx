@@ -9,7 +9,7 @@ import CartIcon from "@/components/icons/CartIcon";
 import CloseIcon from "@/components/icons/CloseIcon";
 import NavLinkHeader from "@/components/header/NavLinkHeader";
 
-import CartDetailsHeader from "@/components/header/CartDetailsHeader";
+import CartCard from "./CartCard";
 
 const MainHeader = () => {
   const { totalQuantityProduct } = useContext(CartDetailsContext);
@@ -26,7 +26,7 @@ const MainHeader = () => {
 
   return (
     <>
-      <header className="container  mx-auto flex items-center gap-8 p-4 md:p-0">
+      <header className="container mx-auto flex items-center gap-8 p-4 md:p-4">
         <button className="md:hidden" onClick={handleOpenMenu}>
           <MenuIcon />
         </button>
@@ -54,7 +54,7 @@ const MainHeader = () => {
         <div className="flex gap-4">
           <button
             onClick={() => setOpenDetailsCart(!isOpenDetailsCart)}
-            className="relative"
+            className="relative top-0"
           >
             <CartIcon />
             <span className="rigth-0 absolute top-0 translate-x-1 rounded-full bg-orange-primary px-2 text-xs font-bold text-white">
@@ -62,7 +62,7 @@ const MainHeader = () => {
             </span>
           </button>
           <img src={AvatarImage} alt="" className="w-10" />
-          {isOpenDetailsCart && <CartDetailsHeader />}
+          {isOpenDetailsCart && <CartCard />}
         </div>
       </header>
       <span className="container mx-auto hidden h-[3px] w-full bg-gray-500 md:block"></span>
