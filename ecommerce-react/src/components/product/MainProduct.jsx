@@ -33,7 +33,7 @@ const objectProduct = {
 
 const MainProduct = () => {
   return (
-    <main className=" grid grid-cols-1 items-center gap-8 md:container xl:container md:mx-auto md:min-h-[calc(100vh-88px-3px)] md:grid-cols-2 xl:mx-auto xl:min-h-[calc(100vh-88px-3px)] xl:grid-cols-3">
+    <main className=" grid grid-cols-1 items-center gap-8 md:container  md:mx-auto md:min-h-[calc(100vh-88px-3px)] md:grid-cols-2 xl:mx-16 xl:min-h-[calc(100vh-88px-3px)] xl:grid-cols-3 ">
       <MainImages imgs={imgs} imgsSmall={imgsSmall} />
       <DetailProduct objectProduct={objectProduct} />
     </main>
